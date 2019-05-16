@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --first: 68, 132, 206; /* Cerulean */
+  --second: 249, 207, 0; /* Light */
+  --third: 241, 159, 77; /* tangerine */
+  --fourth: 217, 217, 217; /* Clean */
+  --gray: 217, 217, 217; /* gray */
+  --black: #333333;
+  --light-black: #333333aa;
+  --white: #ffffff;
+  --light-white: #ffffffaa;
+}
+
+h1 {
+  font-size: 4vw;
+  padding: 0.2em 0;
+  font-weight: 600;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0.2em 0;
+  font-weight: 600;
+}
+h4 {
+  font-size: calc(28px + (36 - 28) * (100vw - 320px) / (1440 - 320));
+  margin: 0;
+  padding: calc(8px + (15 - 8) * (100vw - 320px) / (1440 - 320)) 0;
+}
+h5 {
+  font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1440 - 320));
+  margin: 0;
+  padding: calc(5px + (10 - 5) * (100vw - 320px) / (1440 - 320)) 0;
+  text-transform: uppercase;
+}
+a {
+  color: inherit;
+}
+p {
+  margin: 0;
+  padding: calc(2px + (5 - 2) * (100vw - 320px) / (1440 - 320)) 0 calc(5px + (10 - 5) * (100vw - 320px) / (1440 - 320));
+}
+ul {
+  margin: 0;
+  padding-top: calc(2px + (5 - 2) * (100vw - 320px) / (1440 - 320));
+  padding-bottom: calc(5px + (10 - 5) * (100vw - 320px) / (1440 - 320));
+}
+
+@media (orientation: portrait) {
+	h1 {
+		font-size: 6vw;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}

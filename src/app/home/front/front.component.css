@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  padding: 0 3%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.center {
+	text-align: center;
+}
+
+.my-pic {
+	height: 40vmin;
+	width: 40vmin;
+	max-width: 250px;
+	max-height: 250px;
+	border-radius: 50%;
+	border: 1vmin solid rgb(var(--third));
+}
+
+header {
+	padding: 2vh 0;
+}
+
+.name {
+	color: rgb(var(--third));
+	text-align: center;
+}
+
+button {
+	padding: 10px;
+	border: 2px solid rgb(var(--third));
+	border-radius: 4px;
+	background-color: rgb(var(--first));
+	transition: 0.5s ease-in-out;
+}
+
+fa[name="arrow-down"] {
+	transform: rotate(-90deg);
+	display: inline-block;
+	transition: 0.5s ease-in-out;
+}
+
+button:hover {
+	border-radius: 25px;
+}
+
+button:hover fa {
+	transform: rotate(0);
+}
