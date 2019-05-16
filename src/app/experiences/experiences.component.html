@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Experience</h2>
+  <div class="cards">
+    <div class="card" *ngFor="let entry of data">
+      <a [routerLink]="['/experience', entry.link]">
+        <div>
+          <h3>{{ entry.company }}</h3>
+        </div>
+        <div>
+          <p>{{ entry.profile }}</p>
+          <p>{{ entry.duration }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
