@@ -13,13 +13,12 @@ import { HomeComponent } from './home/home.component';
 import { FrontComponent } from './home/front/front.component';
 import { BackComponent } from './home/back/back.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
-import { ExperienceComponent } from './experiences/experience/experience.component';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent, ExperienceComponent],
+  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

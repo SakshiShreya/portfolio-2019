@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { ExperiencesService } from './experiences.service';
+import { Subscription } from 'rxjs';
 
 export interface Experience {
   company: string;
@@ -18,19 +19,21 @@ export interface Experience {
   styleUrls: ['./experiences.component.css'],
   providers: [ExperiencesService]
 })
-export class ExperiencesComponent implements OnInit {
+export class ExperiencesComponent implements OnInit, OnDestroy {
   data: Experience[];
+  subscription: Subscription;
 
   constructor(private fbService: FirebaseService, private expService: ExperiencesService) {
-    this.fbService.getData('/experience').subscribe((data: Experience[]) => {
+    this.subscription = this.fbService.getData('/experience').subscribe((data: Experience[]) => {
       this.data = data;
-      this.data.forEach(obj => {
-        obj.link = obj.company.replace(/\s/g, '-');
-      });
       console.log(this.data);
       this.expService.Data = this.data;
     });
   }
 
   ngOnInit() {}
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }

@@ -1,16 +1,26 @@
 <div class="container">
   <h2>Experience</h2>
-  <div class="cards">
-    <div class="card" *ngFor="let entry of data">
-      <a [routerLink]="['/experience', entry.link]">
-        <div>
-          <h3>{{ entry.company }}</h3>
+  <div class="ui unstackable items">
+    <div class="item" *ngFor="let item of data">
+      <div class="ui tiny image" *ngIf="item.img">
+        <img [src]="item.img" />
+      </div>
+      <div class="content" [ngClass]="{'left-padding' : !item.img}">
+        <h3>{{ item.company }} - {{ item.profile }}</h3>
+        <div class="meta">
+          <div *ngIf="item.location" class="location">{{ item.location }}</div>
+          <div>{{ item.duration }}</div>
         </div>
-        <div>
-          <p>{{ entry.profile }}</p>
-          <p>{{ entry.duration }}</p>
+        <div class="description">
+          <ul>
+            <li *ngFor="let desc of item.description" [innerHTML]="desc"></li>
+          </ul>
+          <p>Worked on:</p>
+          <div>
+            <span class="ui blue label" *ngFor="let technology of item.technologies">{{ technology }}</span>
+          </div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
   <router-outlet></router-outlet>
