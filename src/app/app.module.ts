@@ -12,10 +12,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FrontComponent } from './home/front/front.component';
 import { BackComponent } from './home/back/back.component';
+import { ExperiencesComponent } from './experiences/experiences.component';
+
 import { AngularFirestore } from '@angular/fire/firestore';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent],
+  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,7 +27,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
     AngularFireDatabaseModule,
     KeyboardShortcutsModule.forRoot()
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore, FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
