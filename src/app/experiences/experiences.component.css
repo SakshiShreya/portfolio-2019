@@ -10,17 +10,18 @@ h3 {
   font-size: 1.5rem;
 }
 
-.ui.items>.item {
+.ui.items > .item {
   background: white;
   border: 1px solid rgb(var(--gray));
   padding-bottom: 0.5em;
 }
 
-.ui.items>.item>.content.left-padding {
+.ui.items > .item > .content.left-padding {
   padding-left: 1em;
 }
 
-.ui.items>.item>.image>img, .ui.items>.item {
+.ui.items > .item > .image > img,
+.ui.items > .item {
   border-radius: 5px;
 }
 
@@ -52,7 +53,8 @@ li {
   .container {
     padding: 1em 5%;
   }
-  .ui.unstackable.items>.item>.image, .ui.unstackable.items>.item>.image>img {
+  .ui.unstackable.items > .item > .image,
+  .ui.unstackable.items > .item > .image > img {
     width: 80px !important;
   }
 }
