@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   count: number;
 
   ngOnInit() {
-    this.els = $('.menu a, .menu header');
+    this.els = $('.menu li, .menu header');
     this.count = this.els.length;
     const groupLength = Math.ceil(this.count / 3);
     let groupNumber = 0;
@@ -34,11 +34,19 @@ export class AppComponent implements OnInit {
   toggle() {
     const count = this.count;
     this.els.each(function(j) {
-      console.log((count - j) * 0.1 + 's');
       $(this).css('--top', $(this)[0].getBoundingClientRect().top + $(this).attr('data-group') * -15 - 20 + 'px');
       $(this).css('--delay-in', j * 0.1 + 's');
       $(this).css('--delay-out', (count - j) * 0.1 + 's');
     });
-    $('.menu').toggleClass('closed');
+
+    if ($('.menu').hasClass('closed')) {
+      $('.menu').removeClass('closed');
+      $('.menu').css('overflow', 'visible');
+    } else {
+      $('.menu').addClass('closed');
+      setTimeout(() => {
+        $('.menu').css('overflow', 'hidden');
+      }, count * 200);
+    }
   }
 }
