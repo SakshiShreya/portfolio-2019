@@ -44,6 +44,10 @@ h3 {
   margin-bottom: 0.4em;
 }
 
+li {
+  word-wrap: break-word;
+}
+
 @media only screen and (max-width: 767px) {
   .container {
     padding: 1em 5%;
