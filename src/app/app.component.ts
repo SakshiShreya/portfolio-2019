@@ -42,8 +42,21 @@ export class AppComponent implements OnInit {
     if ($('.menu').hasClass('closed')) {
       $('.menu').removeClass('closed');
       $('.menu').css('overflow', 'visible');
+
+      // since background changes when we open and close the menu
+      // and also when we hover
+      // and the delay of hover depends on --delay-out
+      // so we have to handle --delay-out accordingly
+      setTimeout(() => {
+        this.els.each(function(j) {
+          $(this).css('--delay-out', '0s');
+        });
+      }, count * 200);
     } else {
       $('.menu').addClass('closed');
+
+      // there is a need to set overflow to hidden so that 
+      // the menu does not interfere with rest of UI
       setTimeout(() => {
         $('.menu').css('overflow', 'hidden');
       }, count * 200);

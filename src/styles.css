@@ -50,6 +50,7 @@ h5 {
 }
 a {
   color: inherit;
+  text-decoration: underline;
 }
 p {
   margin: 0;
