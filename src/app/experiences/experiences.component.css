@@ -63,7 +63,7 @@ li {
 
 @media only screen and (max-width: 767px) {
   .container {
-    padding: 1em 5%;
+    padding: 3em 5%;
   }
   .ui.unstackable.items > .item > .image,
   .ui.unstackable.items > .item > .image > img {
