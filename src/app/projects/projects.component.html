@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Projects</h2>
+  <p>Click on projects to find out more.</p>
+  <div class="ui unstackable link items">
+    <a [routerLink]="['/project', item.url]" *ngFor="let item of data" class="item">
+      <!-- <div class="item"> -->
+      <div class="content">
+        <h3>{{ item.name }}</h3>
+        <div class="meta">
+          <div>{{ item.date }}</div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </a>
+  </div>
+</div>

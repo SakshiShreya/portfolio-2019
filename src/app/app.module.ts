@@ -18,9 +18,22 @@ import { BackComponent } from './home/back/back.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { PublicationsComponent } from './publications/publications.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectComponent } from './projects/project/project.component';
+import { ProjectsService } from './projects/projects.service';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent, CertificationsComponent, PublicationsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    FrontComponent,
+    BackComponent,
+    ExperiencesComponent,
+    CertificationsComponent,
+    PublicationsComponent,
+    ProjectsComponent,
+    ProjectComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +42,7 @@ import { PublicationsComponent } from './publications/publications.component';
     AngularFireDatabaseModule,
     KeyboardShortcutsModule.forRoot()
   ],
-  providers: [AngularFirestore, FirebaseService],
+  providers: [AngularFirestore, FirebaseService, ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

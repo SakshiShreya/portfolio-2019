@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Experience } from './experiences.component';
+import { Project } from './projects.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExperiencesService {
-  data: Experience[];
+export class ProjectsService {
+  data: Project[];
 
   constructor() {}
 
-  set Data(data: Experience[]) {
+  set Data(data: Project[]) {
     this.data = data;
   }
 
