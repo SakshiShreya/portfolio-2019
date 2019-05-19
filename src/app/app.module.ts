@@ -17,9 +17,10 @@ import { FrontComponent } from './home/front/front.component';
 import { BackComponent } from './home/back/back.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent, CertificationsComponent],
+  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent, CertificationsComponent, PublicationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

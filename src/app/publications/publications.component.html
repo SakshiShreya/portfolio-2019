@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Publications</h2>
+  <div class="ui unstackable items">
+    <div class="item" *ngFor="let item of data">
+      <div class="content">
+        <h3>{{ item.name }}</h3>
+        <div class="description">
+          <h4>{{ item.conference }}</h4>
+          <span>{{ item.role }}</span>
+        </div>
+        <div class="meta">
+          <span>{{ item.location }} &nbsp;| &nbsp;{{ item.date }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
