@@ -6,8 +6,13 @@
   padding: 1em 15%;
 }
 
+h2 {
+  color: rgb(var(--third));
+}
+
 h3 {
   font-size: 1.5rem;
+  color: rgb(var(--first));
 }
 
 .ui.items > .item {
@@ -20,9 +25,16 @@ h3 {
   padding-left: 1em;
 }
 
-.ui.items > .item > .image > img,
+.ui.items > .item > .content {
+  padding-right: 1em;
+}
+
 .ui.items > .item {
   border-radius: 5px;
+}
+
+.ui.items > .item > .image > img {
+  border-radius: 5px 0 5px 0;
 }
 
 .location {

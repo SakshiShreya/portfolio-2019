@@ -8,17 +8,18 @@ import { KeyboardShortcutsModule } from 'ng-keyboard-shortcuts';
 
 import { environment } from '../environments/environment';
 
+import { AngularFirestore } from '@angular/fire/firestore';
+import { FirebaseService } from './services/firebase.service';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FrontComponent } from './home/front/front.component';
 import { BackComponent } from './home/back/back.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
-
-import { AngularFirestore } from '@angular/fire/firestore';
-import { FirebaseService } from './services/firebase.service';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent],
+  declarations: [AppComponent, HomeComponent, FrontComponent, BackComponent, ExperiencesComponent, CertificationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Certifications</h2>
+  <div class="ui unstackable items">
+    <div class="item" *ngFor="let item of data">
+      <div class="content">
+        <h3>{{ item.name }}</h3>
+        <div class="meta">
+          <div>Issued on: {{ item.issued }}</div>
+        </div>
+        <div class="description">
+          <p>By: {{ item.company }}</p>
+          <p *ngIf="item.link"><a [href]="item.link">See Certificate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
