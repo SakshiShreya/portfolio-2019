@@ -1,5 +1,21 @@
 h2 {
-  color: rgb(var(--first));
+  color: rgb(var(--third));
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid rgb(var(--first));
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 25px;
 }
 
 .container {
@@ -9,7 +25,7 @@ h2 {
   min-height: 100vh;
   padding: 1em 5%;
 
-  --timing: 265ms
+  --timing: 265ms;
 }
 
 .sections {
@@ -18,6 +34,16 @@ h2 {
   justify-content: center;
   margin: 4vh 0;
 }
+
+.sections a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.about-me {
+  font-size: 1.5rem;
+}
+
 .sections div {
   background: rgb(var(--first));
   /* flex-grow: 1; */
@@ -30,62 +56,73 @@ h2 {
   color: var(--white);
 }
 
-.wrapper, .icons, .container {
-	box-sizing: border-box;
+.wrapper,
+.icons,
+.container {
+  box-sizing: border-box;
 }
 
 .wrapper {
-	text-align: center;
-	display: flex;
-	/* height: 75vh; */
-	justify-content: center;
-	align-items: center;
+  text-align: center;
+  display: flex;
+  /* height: 75vh; */
+  justify-content: center;
+  align-items: center;
 }
 
 .icons {
-	padding: 0;
-	list-style: none;
-	--icon-width: 4.5rem;
+  padding: 0;
+  list-style: none;
+  --icon-width: 4.5rem;
 }
 
 .icons li {
-	display: inline-block;
-	margin: 1rem;
-	position: relative;
-	font-size: 2.2rem;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+}
+
+.icons li a {
+  font-size: 2.2rem;
 }
 
 .icons fa {
-	display: block;
-	width: var(--icon-width);
-	color: var(--white);
-	position: absolute;
-	top: 1.15rem;
-	text-align: center;
-	transition: all var(--timing) ease-out;
+  display: block;
+  width: var(--icon-width);
+  color: var(--white);
+  position: absolute;
+  top: 1.15rem;
+  text-align: center;
+  transition: all var(--timing) ease-out;
 }
 
 .icons a {
-	display: inline-block;
+  display: inline-block;
 }
 
 .icons a::before {
-	content: "";
-	transform: scale(1);
-	width: var(--icon-width);
-	height: var(--icon-width);
-	border-radius: 100%;
-	display: block;
-	background: rgb(var(--third));
-	transition: all ease-out var(--timing);
+  content: '';
+  transform: scale(1);
+  width: var(--icon-width);
+  height: var(--icon-width);
+  border-radius: 100%;
+  display: block;
+  background: rgb(var(--first));
+  transition: all ease-out var(--timing);
 }
 
 .icons a:hover::before {
-	transform: scale(0);
-	transition: all ease-out var(--timing);
+  transform: scale(0);
+  transition: all ease-out var(--timing);
 }
 
-.icons a:hover fa{
-	transform: scale(2);
-	color: rgb(var(--third));
+.icons a:hover fa {
+  transform: scale(2);
+  color: rgb(var(--first));
+}
+
+@media (orientation: portrait) {
+  .about-me {
+    font-size: 1.2rem;
+  }
 }

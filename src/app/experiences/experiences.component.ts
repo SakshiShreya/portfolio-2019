@@ -1,6 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
-import { ExperiencesService } from './experiences.service';
 import { Subscription } from 'rxjs';
 
 export interface Experience {
@@ -16,18 +15,16 @@ export interface Experience {
 @Component({
   selector: 'app-experiences',
   templateUrl: './experiences.component.html',
-  styleUrls: ['./experiences.component.css'],
-  providers: [ExperiencesService]
+  styleUrls: ['./experiences.component.css']
 })
 export class ExperiencesComponent implements OnDestroy {
   data: Experience[];
   subscription: Subscription;
 
-  constructor(private fbService: FirebaseService, private expService: ExperiencesService) {
+  constructor(private fbService: FirebaseService) {
     this.subscription = this.fbService.getData('/experience').subscribe((data: Experience[]) => {
       this.data = data;
       console.log(this.data);
-      this.expService.Data = this.data;
     });
   }
 

@@ -1,0 +1,18 @@
+<div class="container" *ngIf="project">
+  <div class="content">
+    <h2>{{ project.name }}</h2>
+    <div class="date">
+      {{ project.date }}
+    </div>
+    <div>
+      <p *ngFor="let desc of project.description">{{ desc }}</p>
+      <p *ngIf="project.link"><a [href]="project.link" target="_blank" class="project-link">See Project</a></p>
+    </div>
+    <div class="technologies">
+      <h3>Technologies/tools used:</h3>
+      <ul>
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
