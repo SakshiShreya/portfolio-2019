@@ -4,6 +4,14 @@
   left: 20px;
   top: 20px;
 }
+.menu-open {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 nav {
   --duration: 0.5s;
   --easing: ease-in-out;
@@ -16,6 +24,9 @@ nav ol {
   padding: 0;
   width: 220px;
 }
+nav li:first-child {
+  border-top: 1px solid rgb(var(--gray));
+}
 nav li {
   margin: -4px 0 0 0;
   background: #fff;
@@ -24,6 +35,11 @@ nav li {
   transition-delay: var(--delay-out);
   border-radius: 4px;
   padding: 1em 1.52em;
+  border-left: 1px solid rgb(var(--gray));
+  border-right: 1px solid rgb(var(--gray));
+}
+nav li:last-child {
+  border-bottom: 1px solid rgb(var(--gray));
 }
 nav a {
   display: block;
@@ -36,7 +52,7 @@ nav li:hover {
 nav header {
   font-weight: 600;
   display: block;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(var(--third), 0.5);
   transform-origin: top left;
   transition: transform var(--duration) var(--easing), color var(--duration) var(--easing), background var(--duration) var(--easing);
   transition-delay: var(--delay-out);
