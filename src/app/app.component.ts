@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
 
     if ($('.menu').hasClass('closed')) {
       $('.menu').removeClass('closed');
+      $('.menu-overlay').addClass('menu-open');
       $('.menu').css('overflow', 'visible');
 
       // since background changes when we open and close the menu
@@ -54,7 +55,7 @@ export class AppComponent implements OnInit {
       }, count * 200);
     } else {
       $('.menu').addClass('closed');
-
+      $('.menu-overlay').removeClass('menu-open');
       // there is a need to set overflow to hidden so that 
       // the menu does not interfere with rest of UI
       setTimeout(() => {
