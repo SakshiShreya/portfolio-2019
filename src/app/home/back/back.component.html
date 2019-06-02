@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="center"><button (click)="flip()">Flip back (Ctrl + M)</button></div>
+  <div class="center"><button (click)="flip()">Flip back {{checkMobile() ? "" : "(Ctrl + M)"}}</button></div>
 
   <div class="center about-me">
     <h2>Hello. Thank you for checking on my site.</h2>
@@ -12,7 +12,7 @@
       Delhi in 2018.
     </p>
     <p>
-      I have mentored 50+ students and professionals. I have worked as a mentor in
+      I have mentored 50+ students and professionals. I have participated as a mentor in
       <a href="https://www.gssoc.tech/" target="_blank">GSSoC'19 (GirlScript Summer of Code)</a>. I have taught Java, Python, C and Data
       Structures online through various mediums like WhatsApp, TeamViewer, Skype etc. Other than coding, I also love to paint and sketch.
       Please scroll down to find different apps/sites where we can connect.

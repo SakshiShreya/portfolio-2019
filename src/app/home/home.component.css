@@ -13,7 +13,7 @@ app-front {
 app-back {
   display: block;
   transform-origin: top;
-  background: rgb(var(--fourth));
+  background: var(--white);
 }
 
 app-front.open {
