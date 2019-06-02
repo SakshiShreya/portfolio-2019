@@ -56,7 +56,8 @@ export class AppComponent implements OnInit {
     } else {
       $('.menu').addClass('closed');
       $('.menu-overlay').removeClass('menu-open');
-      // there is a need to set overflow to hidden so that 
+
+      // there is a need to set overflow to hidden so that
       // the menu does not interfere with rest of UI
       setTimeout(() => {
         $('.menu').css('overflow', 'hidden');
