@@ -8,6 +8,7 @@
   </div>
 
   <div>
-    <button (click)="flip()">More about me (Ctrl + M) <fa name="arrow-down"></fa></button>
+    <button (click)="flip()">About me &nbsp;<fa name="arrow-down"></fa></button>
+    <div *ngIf="!checkMobile()" class="ctrlM">(Ctrl + M)</div>
   </div>
 </div>
