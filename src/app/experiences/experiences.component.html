@@ -1,11 +1,15 @@
 <div class="container">
-  <h2>Experience</h2>
+  <header>
+    <h2>Experience</h2>
+    <a routerLink="/"><fa name="arrow-left"></fa> &nbsp;<span>Back</span></a>
+  </header>
+
   <div class="ui unstackable items">
     <div class="item" *ngFor="let item of data">
       <div class="ui tiny image" *ngIf="item.img">
         <img [src]="item.img" />
       </div>
-      <div class="content" [ngClass]="{'left-padding' : !item.img}">
+      <div class="content" [ngClass]="{ 'left-padding': !item.img }">
         <h3>{{ item.company }} - {{ item.profile }}</h3>
         <div class="meta">
           <div *ngIf="item.location" class="location">{{ item.location }}</div>

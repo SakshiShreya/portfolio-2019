@@ -1,5 +1,9 @@
 <div class="container">
-  <h2>Projects</h2>
+  <header>
+    <h2>Projects</h2>
+    <a routerLink="/"><fa name="arrow-left"></fa> &nbsp;<span>Back</span></a>
+  </header>
+
   <p>Click on projects to find out more.</p>
   <div class="ui unstackable link items">
     <a [routerLink]="['/project', item.url]" *ngFor="let item of data" class="item">
