@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
-  constructor(private afs: AngularFireDatabase) {}
+  constructor(private http: HttpClient) {}
 
-  getData(path: string) {
-    return this.afs.list(path).valueChanges();
+  getData(path: string): Observable<any> {
+    return this.http.get(`https://portfolio-dd5f6.firebaseio.com${path}.json`);
   }
 }

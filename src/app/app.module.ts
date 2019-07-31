@@ -2,13 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { KeyboardShortcutsModule } from 'ng-keyboard-shortcuts';
 
-import { environment } from '../environments/environment';
-
-import { AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseService } from './services/firebase.service';
 
 import { AppComponent } from './app.component';
@@ -21,6 +16,7 @@ import { PublicationsComponent } from './publications/publications.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectsService } from './projects/projects.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,11 +34,10 @@ import { ProjectsService } from './projects/projects.service';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    KeyboardShortcutsModule.forRoot()
+    KeyboardShortcutsModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [AngularFirestore, FirebaseService, ProjectsService],
+  providers: [FirebaseService, ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
