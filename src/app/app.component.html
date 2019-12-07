@@ -2,13 +2,23 @@
   <nav class="menu">
     <header>Menu <span>x</span></header>
     <ol>
-      <li class="menu-item"><a routerLink="/">Home</a></li>
-      <li class="menu-item"><a routerLink="/experience">Experience</a></li>
-      <li class="menu-item"><a routerLink="/project">Projects</a></li>
-      <li class="menu-item"><a routerLink="/publication">Publications</a></li>
-      <li class="menu-item"><a routerLink="/certification">Certifications</a></li>
+      <li class="menu-item"><a routerLink="/" (click)="toggle()">Home</a></li>
+      <li class="menu-item">
+        <a routerLink="/experience" (click)="toggle()">Experience</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/project" (click)="toggle()">Projects</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/publication" (click)="toggle()">Publications</a>
+      </li>
+      <li class="menu-item">
+        <a routerLink="/certification" (click)="toggle()">Certifications</a>
+      </li>
     </ol>
-    <div class="toggle"><button aria-label="Toggle menu" (click)="toggle()">Toggle</button></div>
+    <div class="toggle">
+      <button aria-label="Toggle menu" (click)="toggle()">Toggle</button>
+    </div>
   </nav>
 </div>
 <div class="menu-overlay" (click)="toggle()"></div>
